@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>{{title}} Jack's Mega Game Site</title>
+</head>
+<header>
+<h1>Jack's Mega Game Site</h1>
+<nav id="taskbar">
+    <ul>
+        <li>
+            <a href="/">Home</a>
+        </li>
+        <li>
+            <a href="/game">Rock, Paper, Scissors</a>
+        </li>
+        <li>
+            <a href="/game2">Placeholder Game 2</a>
+        </li>
+        <li>
+            <a href="/game3">Placeholder Game 3</a>
+        </li>
+    </ul>
+</nav>
+</header>
+
+<body>
+    <main>
+    {% block content %}
+    {% endblock %}
+    </main>
+</body>
+
+<footer>
+    <span>CodeClan &copy;</span> 
+</footer>
+</html>

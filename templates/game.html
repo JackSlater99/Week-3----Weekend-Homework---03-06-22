@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1> Rock, Paper, Scissors Game </h1>
+<p>This is a classic two-person game. Players start each round by selecting rock, paper or scissors. The winner is determined by each players selection. Rock crushes scissors, scissors cut paper, and paper covers rock. See who wins each round!</p>
+
+<p>Please make a selection for each player below and then submit your choices!</p>
+
+<form action="/game" method="post">
+    <label for="player_1_choice">Player 1 Choice:</label>
+    <select name="player_1_choice" id="player-1-choice">
+        <option value="rock">Rock</option>
+        <option value="paper">Paper</option>
+        <option value="scissors">Scissors</option>
+    </select>
+    <label for="player_2_choice">Player 2 Choice:</label>
+    <select name="player_2_choice" id="player_2_choice">
+        <option value="rock">Rock</option>
+        <option value="paper">Paper</option>
+        <option value="scissors">Scissors</option>
+    </select>
+    <input type="submit" value="Play!">
+</form>
+
+<div>
+{% print(winner) %}
+</div>
+
+
+{% endblock %}
